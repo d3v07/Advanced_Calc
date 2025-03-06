@@ -1,0 +1,7 @@
+[run]
+branch = True
+source = 
+    calculator
+    tests
+omit =
+    */__pycache__/*
