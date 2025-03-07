@@ -1,3 +1,8 @@
 # MIDTERM IS601 - ADVANCED CALCULATOR
 
-Just added a basic calculator as a foundation for the midterm project.
+
+1) Error handling and unit testing
+
+2) Faker library for generating test data
+
+3) CLI calculator with multiple tests
