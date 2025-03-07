@@ -36,7 +36,6 @@ jobs:
           pip install pylint pytest-pylint
           pytest --pylint
 
-       - name: Run num records
+       -name: Run num records
         run: |
             pytest --num_records=100
-            
