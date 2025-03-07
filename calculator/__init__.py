@@ -1,29 +1,31 @@
+# Import necessary modules and classes
+from calculator.history import Calculations
 from calculator.operations import add, subtract, multiply, divide
+from calculator.calculation import Calculation
+from decimal import Decimal
+from typing import Callable
 
-class Calculation:
-    def __init__(self, a, b, operation):
-        self.a = a
-        self.b = b
-        self.operation = operation  # Store the operation function
+# Definition of the Calculator class
+class Calculator:
+    @staticmethod
+    def _perform_operation(a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
+        """Create and perform a calculation, then return the result."""
+        calculation = Calculation.create(a, b, operation)
+        Calculations.add_calculation(calculation)
+        return calculation.perform()
 
-    def get_result(self):
-        # Call the stored operation with a and b
-        return self.operation(self.a, self.b)
+    @staticmethod
+    def add(a: Decimal, b: Decimal) -> Decimal:
+        return Calculator._perform_operation(a, b, add)
 
-class calculator:
     @staticmethod
-    def add(a,b):
-        calculation = Calculation(a, b, add)  # Pass the add function from calculator.operations
-        return calculation.get_result()
+    def subtract(a: Decimal, b: Decimal) -> Decimal:
+        return Calculator._perform_operation(a, b, subtract)
+
     @staticmethod
-    def subtract(a,b):
-        calculation = Calculation(a, b, subtract)  # Pass the add function from calculator.operations
-        return calculation.get_result()
+    def multiply(a: Decimal, b: Decimal) -> Decimal:
+        return Calculator._perform_operation(a, b, multiply)
+
     @staticmethod
-    def multiply (a,b):
-        calculation = Calculation(a, b, multiply)  # Pass the add function from calculator.operations
-        return calculation.get_result()
-    @staticmethod
-    def divide(a,b):
-        calculation = Calculation(a, b, divide)  # Pass the add function from calculator.operations
-        return calculation.get_result()
+    def divide(a: Decimal, b: Decimal) -> Decimal:
+        return Calculator._perform_operation(a, b, divide)
