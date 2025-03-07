@@ -5,3 +5,4 @@ source =
     tests
 omit =
     */__pycache__/*
+    main.py
