@@ -5,19 +5,40 @@ This is test calculation
 # pylint: disable=unnecessary-dunder-call, invalid-name
 from decimal import Decimal
 import pytest
+from faker import Faker
 from calculator.calculation import Calculation
 from calculator.operations import add, subtract, multiply, divide
 
-@pytest.mark.parametrize("a, b, operation, expected", [
-    (Decimal('10'), Decimal('5'), add, Decimal('15')),
-    (Decimal('10'), Decimal('5'), subtract, Decimal('5')),
-    (Decimal('10'), Decimal('5'), multiply, Decimal('50')),
-    (Decimal('10'), Decimal('2'), divide, Decimal('5')),
-    (Decimal('10.5'), Decimal('0.5'), add, Decimal('11.0')),
-    (Decimal('10.5'), Decimal('0.5'), subtract, Decimal('10.0')),
-    (Decimal('10.5'), Decimal('2'), multiply, Decimal('21.0')),
-    (Decimal('10'), Decimal('0.5'), divide, Decimal('20')),
-])
+# Setup Faker
+faker = Faker()
+
+# Generate test data using Faker
+def generate_test_data(num_cases=10):
+    """
+    Generate test data for the calculation operations.
+    """
+    operations = [add, subtract, multiply, divide]
+    test_data = []
+    for _ in range(num_cases):
+        a = Decimal(faker.random_number(digits=2, fix_len=True))
+        b = Decimal(faker.random_number(digits=2, fix_len=True))
+        for operation in operations:
+            # Avoid division by zero
+            if operation == divide and b == 0:
+                b = Decimal(faker.random_number(digits=2, fix_len=True, min=1))
+            expected = operation(a, b)
+            test_data.append((a, b, operation, expected))
+    return test_data
+# Parametrize the test function with dynamically generated data
+@pytest.mark.parametrize("a, b, operation, expected", generate_test_data())
+def test_operations(a, b, operation, expected):
+    """
+    Test calculation operations with dynamically generated test data
+    """
+    assert operation(a, b) == expected
+
+# Retain fixture for previous test cases with edge case scenarios
+@pytest.mark.parametrize("a, b, operation, expected",[])
 def test_calculation_operations(a, b, operation, expected):
     """
     Test calculation operations with various scenarios.
