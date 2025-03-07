@@ -27,7 +27,7 @@ def calculate_and_print(a, b, operation_name):
 
 def main():
     if len(sys.argv) != 4:
-        print("Usage: python calculator_main.py <number1> <number2> <operation>")
+        print("Usage: python main.py <number1> <number2> <operation>")
         sys.exit(1)
 
     _, a, b, operation = sys.argv
