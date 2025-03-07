@@ -1,3 +1,4 @@
 # MIDTERM IS601 - ADVANCED CALCULATOR
 
-Just added a basic calculator as a foundation for the midterm project.
+1) This calculator follows factory method. 
+2) The calculator has history feature integrated in it. 
