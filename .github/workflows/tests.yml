@@ -1,12 +1,12 @@
-name: Run Tests on Push or Pull Request to Main
+name: Run Tests on Push or Pull Request to Faker Branch
 
 on:
   push:
     branches:
-      - design
+      - faker 
   pull_request:
     branches:
-      - design
+      - faker
 
 jobs:
   test:
@@ -35,3 +35,5 @@ jobs:
         run: |
           pip install pylint pytest-pylint
           pytest --pylint
+
+      
