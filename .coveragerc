@@ -1,8 +1,9 @@
 [run]
 branch = True
 source = 
-    calculator
-    tests
+    app
 omit =
     */__pycache__/*
     main.py
+    tests/conftest.py
+    tests/__init__.py
