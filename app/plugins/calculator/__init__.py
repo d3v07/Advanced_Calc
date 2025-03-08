@@ -39,10 +39,10 @@ class CalculatorCommand(Command):
             print("\nCalculator Operations:")
             for key in sorted(self.operations.keys(), key=int):
                 print(f"{key}. {self.operations[key].__class__.__name__}")
-            print("0. Back")
+            print("5. Back")
 
             choice = input("Select an operation: ")
-            if choice == '0':
+            if choice == '5':
                 logging.info("User selected to go back from CalculatorCommand.")
                 break  # Exit to the main menu
 
