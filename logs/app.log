@@ -1,0 +1,29 @@
+2025-03-08 12:57:34,648 - INFO - Logging configured.
+2025-03-08 12:57:34,652 - INFO - Found plugin: calculator
+2025-03-08 12:57:34,653 - INFO - Registered command: calculator
+2025-03-08 12:57:34,654 - INFO - Found plugin: exit
+2025-03-08 12:57:34,654 - INFO - Registered command: exit
+2025-03-08 12:57:34,654 - INFO - Found plugin: goodbye
+2025-03-08 12:57:34,654 - INFO - Registered command: goodbye
+2025-03-08 12:57:34,654 - INFO - Found plugin: greet
+2025-03-08 12:57:34,654 - INFO - Registered command: greet
+2025-03-08 12:57:34,654 - INFO - Found plugin: menu
+2025-03-08 12:57:34,654 - INFO - Application starting...
+2025-03-08 12:57:38,333 - INFO - Executing calculator operation: Add
+2025-03-08 12:57:38,333 - INFO - Executing Add command.
+2025-03-08 12:57:39,327 - INFO - Addition result: 5.0
+2025-03-08 12:57:41,243 - INFO - Executing calculator operation: Divide
+2025-03-08 12:57:41,243 - INFO - Executing Divide command.
+2025-03-08 12:57:43,825 - INFO - Division result: 3.0
+2025-03-08 12:57:45,998 - INFO - Executing calculator operation: Multiply
+2025-03-08 12:57:45,998 - INFO - Executing Multiply command.
+2025-03-08 12:57:47,149 - INFO - Multiplication result: 20.0
+2025-03-08 12:57:48,009 - INFO - Executing calculator operation: Subtract
+2025-03-08 12:57:48,009 - INFO - Executing Subtract command.
+2025-03-08 12:57:50,179 - INFO - Subtraction result: 1.0
+2025-03-08 12:57:52,366 - INFO - User selected to go back from CalculatorCommand.
+2025-03-08 12:57:54,885 - INFO - Executing GoodbyeCommand.
+2025-03-08 12:57:54,885 - INFO - GoodbyeCommand executed successfully.
+2025-03-08 12:58:03,846 - INFO - Displaying main menu to user.
+2025-03-08 12:58:10,514 - INFO - User selected command: exit
+2025-03-08 12:58:10,515 - INFO - Executing ExitCommand - Application exiting...

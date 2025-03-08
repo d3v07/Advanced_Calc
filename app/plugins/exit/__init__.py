@@ -1,7 +1,9 @@
 import sys
+import logging
 from app.commands import Command
-
 
 class ExitCommand(Command):
     def execute(self):
-        sys.exit("Exiting...")
+        logging.info("Executing ExitCommand - Application exiting...")  
+        print("Exiting...") 
+        sys.exit(0)  

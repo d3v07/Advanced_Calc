@@ -1,6 +1,8 @@
+import logging
 from app.commands import Command
-
 
 class GoodbyeCommand(Command):
     def execute(self):
-        print("Goodbye")
+        logging.info("Executing GoodbyeCommand.")  
+        print("Goodbye")  
+        logging.info("GoodbyeCommand executed successfully.")  
