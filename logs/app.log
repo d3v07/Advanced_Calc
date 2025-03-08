@@ -27,3 +27,30 @@
 2025-03-08 12:58:03,846 - INFO - Displaying main menu to user.
 2025-03-08 12:58:10,514 - INFO - User selected command: exit
 2025-03-08 12:58:10,515 - INFO - Executing ExitCommand - Application exiting...
+2025-03-08 13:13:35,451 - INFO - Logging configured.
+2025-03-08 13:13:35,460 - INFO - Found plugin: calculator
+2025-03-08 13:13:35,464 - INFO - Registered command: calculator
+2025-03-08 13:13:35,464 - INFO - Found plugin: exit
+2025-03-08 13:13:35,464 - INFO - Registered command: exit
+2025-03-08 13:13:35,464 - INFO - Found plugin: goodbye
+2025-03-08 13:13:35,465 - INFO - Registered command: goodbye
+2025-03-08 13:13:35,465 - INFO - Found plugin: greet
+2025-03-08 13:13:35,465 - INFO - Registered command: greet
+2025-03-08 13:13:35,466 - INFO - Found plugin: menu
+2025-03-08 13:13:35,466 - INFO - Application starting...
+2025-03-08 13:19:04,202 - INFO - User selected to go back from CalculatorCommand.
+2025-03-08 13:19:07,194 - INFO - Executing ExitCommand - Application exiting...
+2025-03-08 18:11:15,032 - INFO - Logging configured.
+2025-03-08 18:11:15,042 - INFO - Found plugin: calculator
+2025-03-08 18:11:15,044 - INFO - Registered command: calculator
+2025-03-08 18:11:15,045 - INFO - Found plugin: exit
+2025-03-08 18:11:15,045 - INFO - Registered command: exit
+2025-03-08 18:11:15,045 - INFO - Found plugin: goodbye
+2025-03-08 18:11:15,046 - INFO - Registered command: goodbye
+2025-03-08 18:11:15,046 - INFO - Found plugin: greet
+2025-03-08 18:11:15,047 - INFO - Registered command: greet
+2025-03-08 18:11:15,047 - INFO - Found plugin: menu
+2025-03-08 18:11:15,047 - INFO - Application starting...
+2025-03-08 18:11:36,982 - INFO - Displaying main menu to user.
+2025-03-08 18:12:32,927 - INFO - User selected command: exit
+2025-03-08 18:12:32,927 - INFO - Executing ExitCommand - Application exiting...
