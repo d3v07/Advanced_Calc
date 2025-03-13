@@ -9,7 +9,9 @@ load-plugins=pylint_django
 # Disable the following checks
 disable= unused-argument,
          line-too-long,
-         redefined-outer-name
+         redefined-outer-name,
+         protected-access,
+         unused-import
 
 [REPORTS]
 # Set the output format. Available formats: text, parseable, colorized, json, msvs (visual studio) and html
