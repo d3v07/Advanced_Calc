@@ -53,3 +53,4 @@ class CalculatorCommand(Command):
             else:
                 logging.warning("Invalid selection in CalculatorCommand.")
                 print("Invalid selection. Please try again.")
+                
