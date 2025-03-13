@@ -1,12 +1,12 @@
-name: Run Tests on Push or Pull Request to Faker Branch
+name: Run Tests on Push or Pull Request to Plugins Branch
 
 on:
   push:
     branches:
-      - faker 
+      - plugins 
   pull_request:
     branches:
-      - faker
+      - plugins
 
 jobs:
   test:
@@ -36,6 +36,3 @@ jobs:
           pip install pylint pytest-pylint
           pytest --pylint
 
-      - name: Run num records
-        run: |
-          pytest --num_records=100

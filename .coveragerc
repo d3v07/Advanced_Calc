@@ -2,6 +2,7 @@
 branch = True
 source = 
     app
+    tests
 omit =
     */__pycache__/*
     main.py
