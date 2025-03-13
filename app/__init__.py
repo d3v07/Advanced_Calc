@@ -1,15 +1,38 @@
 import os
 import pkgutil
 import importlib
-from app.commands import CommandHandler, Command
+from app.commands import CommandHandler, Command ,CommandHistoryManager
 from app.plugins.menu import MenuCommand
 import logging
+from dotenv import load_dotenv
+from dotenv import find_dotenv
 
 class App:
-    def __init__(self):  # Constructor
+    def __init__(self):  
         os.makedirs('logs', exist_ok=True)  # Ensure the logs directory exists
         self.configure_logging()
+        load_dotenv(override=True)
+        self.settings = self.load_environment_variables()
+        self.settings.setdefault('ENVIRONMENT', 'DEVELOPMENT')
         self.command_handler = CommandHandler()
+        
+    def load_environment_variables(self):
+         settings = {key: value for key, value in os.environ.items()}
+         logging.info("Environment variables loaded.")
+         environment = settings.get('ENVIRONMENT', None)
+         logging.info(f"ENVIRONMENT variable is set to: '{environment}'")
+         if(environment == "PRODUCTION"):
+             logging.info("PRODUCTION ENVIRONMENT")
+         elif(environment == "TESTING"):
+             logging.info("TESTING ENVIRONMENT")
+         elif(environment == "DEVELOPMENT"):
+             logging.info("DEVELOPMENT ENVIRONMENT")
+             logging.info(f"DB_HOST: {settings.get('DB_HOST', None)}")
+             logging.info(f"DB_USER: {settings.get('DB_USER', None)}")
+         return settings
+
+    def get_environment_variable(self, env_var: str = 'ENVIRONMENT'):
+         return self.settings.get(env_var, None)
 
     def configure_logging(self):
         log_file_path = 'logs/app.log'
@@ -51,6 +74,7 @@ class App:
         self.load_plugins()
         logging.info("Application starting...")  # Log application start
         self.print_main_menu()
+        command_history = CommandHistoryManager() 
         while True:
             user_input = input(">>> ").strip()
             if user_input.lower() == 'exit':
@@ -65,6 +89,7 @@ class App:
                 command_name = self.command_handler.get_command_by_index(index)
                 if command_name:
                     self.command_handler.execute_command(command_name)
+                    command_history.add_command(command_name) 
                     self.print_main_menu()  # Print the main menu again after command execution for user
                 else:
                     logging.warning("Invalid selection. Please enter a valid number.")  # Logging warning
