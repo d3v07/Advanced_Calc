@@ -3,7 +3,7 @@
 ## Project Introduction
 Welcome to the Advanced Python Calculator Application, a demonstration of modern software engineering practices applied to a calculator system. This project showcases clean code architecture, design pattern implementation, and extensible functionality in a practical application. Below you'll find a video demonstration of the application in action, which highlights the key features and user interface.
 
-[video link (video to be made yet)] - Watch the calculator application in action to see how it handles calculations, manages history, and leverages its plugin architecture through an intuitive command-line interface.
+[Video for project](https://youtu.be/0ntkD3Xzt-Y) - Watch the calculator application in action to see how it handles calculations, manages history, and leverages its plugin architecture through an intuitive command-line interface.
 
 ## Project Summary
 This project implements a sophisticated Python-based calculator with a focus on software engineering best practices. It features a command-line interface, extensible plugin architecture, comprehensive logging, and robust data handling capabilities. To see my project workflow [click here](documents/project_flow.md).
@@ -52,7 +52,7 @@ The application incorporates several design patterns to address specific archite
 - History management functionality captures and restores calculation states
 - Enables undo/redo capabilities through state externalization
 
-To see how I implemented it in project[click here](documents/design_patterns.md)
+To see how I implemented it in project [click here](documents/design_patterns.md)
 
 ### Quality Assurance
 
