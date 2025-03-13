@@ -2343,3 +2343,4 @@ CSV_COLUMNS_TO_KEEP=['State abbreviation', 'State Name', 'Population','Capital',
 2025-03-13 11:53:30,361 - INFO - Index: 19,     Population: 5893718
 2025-03-13 11:53:30,361 - INFO - Index: 19,     Capital: Madison
 2025-03-13 11:53:30,361 - INFO - Index: 19,     GDP: 0.3T
+2025-03-13 12:13:18,642 - INFO - Executing ExitCommand - Application exiting...
